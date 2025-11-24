@@ -32,12 +32,35 @@ public class Main {
             System.out.println("Правильно не дозволив null: " + ex.getMessage());
         }
 
-
+        System.out.println("\n\n");
 
         Printer myPrinter = new Printer();
         Integer[] intArray = {1, 2, 3};
         String[] stringArray = {"Hello", "World"};
         myPrinter.printArray(intArray);
         myPrinter.printArray(stringArray);
+
+        System.out.println("\n\n");
+
+        GenericTwoTuple<String, Integer> person =
+                new GenericTwoTuple<>("Alice", 25);
+
+        GenericTwoTuple<Double, String> product =
+                new GenericTwoTuple<>(19.99, "USB Cable");
+
+        System.out.println(person);
+        System.out.println(product);
+
+        System.out.println("\n\n");
+
+        GenericThreeTuple<String, Integer, Boolean> user =
+                new GenericThreeTuple<>("Bob", 42, true);
+
+        GenericThreeTuple<Double, String, String> book =
+                new GenericThreeTuple<>(4.7, "Dune", "Sci-Fi");
+
+        System.out.println(user);
+        System.out.println(book);
+
     }
 }
