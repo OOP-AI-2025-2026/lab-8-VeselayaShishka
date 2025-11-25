@@ -12,6 +12,10 @@ jobs:
     name: Compile + Tests + Static Analysis + ChatGPT
     runs-on: ubuntu-latest
 
+    defaults:
+      run:
+        working-directory: lab-8-VeselayaShishka
+
     env:
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       CHATGPT_MODEL: gpt-5-nano
